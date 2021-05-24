@@ -19,7 +19,6 @@ while (true) {
     $articles[] = $article;
 }
 
-
 ?>
 
 <!DOCTYPE html>
