@@ -1,7 +1,7 @@
 <?php
-$dbConn = mysqli_connect("127.0.0.1", "root", "", "article") or die("DB connection error");
+$dbConn = mysqli_connect("127.0.0.1:3307", "root", "201610", "employees") or die("DB connection error");
 
-$sql = 'select * from article as A order by A.id desc';
+$sql = 'select * from employees where emp_no between 10000 and 20010';
 
 $rs = mysqli_query($dbConn, $sql);
 
@@ -34,10 +34,10 @@ while (true) {
     <hr>
     <div>
         <?php foreach ($articles as $article) {?>
-            번호 : <?= $article['id']?><br>
-            작성일자 : <?= $article['regDate']?><br>
-            수정일자 : <?= $article['updateDate']?><br>
-            제목 : <?= $article['title']?><br>
+            번호 : <?= $article['emp_no']?><br>
+            생년월일 : <?= $article['birth_date']?><br>
+            이름 : <?= $article['first_name']?><br>
+            성별 : <?= $article['gender']?><br>
             <hr>
         <?php } ?>
     </div>
