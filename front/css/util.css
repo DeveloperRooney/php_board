@@ -1,0 +1,17 @@
+.layout {
+    width : 73%;
+    margin : 0 auto;  
+}
+
+.float-fix {
+    content : "";
+    display: block;
+    clear : both;
+}
+
+@media screen and (max-width : 768px) {
+    .layout {
+        width : 98%;
+        margin-left: 2.5%;
+    }
+}

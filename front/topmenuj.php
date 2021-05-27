@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,10 +31,11 @@
     float: right;
     margin-right : 14px;
     line-height : 33px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-weight : 500;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
-.nav-top::after, .nav-mid::after {
+.navbar::after {
     content : "";
     display: block;
     clear : both;
@@ -60,41 +61,22 @@
     height : 65px;
 }
 
-.topmenu-mid ul {
-    display : inline-block;
-    float: right;
-    margin-top : 16.5px;
-}
-
-.topmenu-mid ul li {
-    font-size : 18px;
-    font-weight : bold;
-}
-
-.topmenu-mid ul li:nth-child(1) {
-}
-
 </style>
 
 <body>
     <nav class="navbar">
-        <div class="nav-top float-fix">
+        <div class="nav-top">
             <div class="topmenu-top layout">
                 <ul>
-                    <li><a href="">회원가입</a></li>
-                    <li><a href="">로그인</a></li>
+                    <li>会員登録</li>
+                    <li>ログイン</li>
                 </ul>
             </div>
         </div>
-        <div class="nav-mid float-fix">
+        <div class="nav-mid">
             <div class="topmenu-mid layout">
                 <img src="img/logo.png" style="height:95%; margin-top : 3px">
-                <ul>
-                    <li><a href="">공지사항</a></li>
-                    <li><a href="">커뮤니티</a></li>
-                </ul>
             </div>
-            
         </div>
     </nav>
 </body>
