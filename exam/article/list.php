@@ -5,9 +5,6 @@ session_start();
 require_once("../util/dao.php");
 
 
-// $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("MariaDB 연결 실패");
-
-
 $sql = "select * from article order by id desc";
 
 $rs = mysqli_query($dbConn, $sql);
@@ -23,7 +20,6 @@ while(true) {
 
     $articles[] = $article;
 }
-
 
 ?>
 
@@ -59,9 +55,12 @@ while(true) {
 
     <nav>        
         <ul>
-            <?php if (isset($_SESSION['user'])) { ?>
+            <?php if (isset($_SESSION['userId'])) { ?>
             <li>
                 <a href="../user/doLogout.php">로그아웃</a>
+            </li>
+            <li>
+                <a href="../user/modify.php">정보수정</a>
             </li>
             <?php }else {?>
             <li>

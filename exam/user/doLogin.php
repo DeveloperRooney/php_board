@@ -5,6 +5,7 @@ session_start();
 
 require_once("../util/dao.php");
 
+
 $userId = $_POST['userId'];
 $userPass = $_POST['userPass'];
 
@@ -21,15 +22,16 @@ $idCkResult = mysqli_query($dbConn, $idCk);
 if ($idCkResult) {
 
     // 비밀번호 확인
-    $passCk = "select userPass from user where userId = '$userId'";
+    $passCk = "select * from user where userId = '$userId'";
     $rs = mysqli_query($dbConn, $passCk);
     $result = mysqli_fetch_assoc($rs);
     if ($result['userPass'] == $userPass) {
         $loginCk = 1;
 
         // 세션
-        $_SESSION['user'] = $userId;
-
+        $_SESSION['userId'] = $result['userId'];
+        $_SESSION['nickName'] = $result['nickName'];
+        $_SESSION['userEmail'] = $result['userEmail'];
     }else {
         $loginCk = 3;
     }
