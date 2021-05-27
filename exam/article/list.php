@@ -24,12 +24,12 @@ while(true) {
 ?>
 
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판 리스트</title>
+    <title>Document</title>
 </head>
 
 <style>
@@ -52,8 +52,7 @@ while(true) {
 </style>
 
 <body>
-
-    <nav>        
+<nav>        
         <ul>
             <?php if (isset($_SESSION['userId'])) { ?>
             <li>
@@ -74,7 +73,6 @@ while(true) {
         </ul>
     </nav>
 
-
     <h1 style="text-align:center">게시판 리스트</h1>
     <table style="margin: 50px auto; width : 800px">
         <tr style="font-weight : bold; text-align : center; border : 1px solid grey">
@@ -92,25 +90,11 @@ while(true) {
             <td style="width : 30px"><?= substr($article['regDate'],0, 11)?></td>
         </tr>
         <?php }?>
-        </body>
     </table>
-    <button style="float : right; margin-right : 200px" type="button" onClick="write()">글작성</button>
-
+    <?php if(isset($_SESSION['userId'])) {?>
+        <button style="float : right; margin-right : 200px" type="button" onClick="location.href='write.php'">글작성</button>
+    <?php }else{?>
+        <button style="float : right; margin-right : 200px" type="button" onClick="alert('로그인 후 이용해 주세요.')">글작성</button>    
+    <?php } ?>
+</body>
 </html>
-
-<script>
-
-    <?php if(isset($_SESSION['user']) {?>
-    <?php }else { ?>
-
-    function write() {
-        location.href="write.php";
-    }
-
-    <?php }else?>
-
-    function write() {
-        alert("로그인 후 이용해주세요.");
-    }
-
-</script>

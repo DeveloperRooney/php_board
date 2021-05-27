@@ -35,6 +35,8 @@ if ($idCkResult) {
     }else {
         $loginCk = 3;
     }
+}else {
+    $loginCk = 0;
 }
 
 ?>
@@ -45,11 +47,8 @@ if ($idCkResult) {
     <?php if ($loginCk == 1) {?>
         alert("로그인되었습니다.");
         location.href="../article/list.php";
-    <?php }else if($loginCk == 3) { ?>
-        alert("비밀번호가 일치하지 않습니다.");
-        history.back();
     <?php }else {?>
-        alert("존재하지 않는 아이디입니다.");
+        alert("아이디 또는 비밀번호가 일치하지 않습니다.");
         history.back();
     <?php }?>
 </script>
