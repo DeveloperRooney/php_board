@@ -1,7 +1,6 @@
 <?php
 
-$dbConn = mysqli_connect("127.0.0.1:3306", 
-"suhan", "201610", "sbs") or die("MariaDB 연동 실패");
+$dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("MariaDB 연결 실패");
 
 $id = $_GET['id'];
 
