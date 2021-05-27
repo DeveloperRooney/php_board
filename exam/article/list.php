@@ -94,5 +94,23 @@ while(true) {
         <?php }?>
         </body>
     </table>
-    <button style="float : right; margin-right : 200px" type="button" onClick="location.href='write.php'">글작성</button>
+    <button style="float : right; margin-right : 200px" type="button" onClick="write()">글작성</button>
+
 </html>
+
+<script>
+
+    <?php if(isset($_SESSION['user']) {?>
+    <?php }else { ?>
+
+    function write() {
+        location.href="write.php";
+    }
+
+    <?php }else?>
+
+    function write() {
+        alert("로그인 후 이용해주세요.");
+    }
+
+</script>
