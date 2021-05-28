@@ -12,7 +12,7 @@
     <!-- google font -->
     
 
-    <title>topmenu</title>
+    <!-- <title>topmenu</title> -->
 </head>
 
 <style>
@@ -32,6 +32,7 @@
     margin-right : 14px;
     line-height : 33px;
     font-family: 'Noto Sans KR', sans-serif;
+    font-weight : 500;
 }
 
 .nav-top::after, .nav-mid::after {
@@ -60,7 +61,11 @@
     height : 65px;
 }
 
-.topmenu-mid ul {
+.mypage {
+    margin-right : 70px;
+}
+
+/* .topmenu-mid ul {
     display : inline-block;
     float: right;
     margin-top : 16.5px;
@@ -71,7 +76,8 @@
     font-size : 18px;
     color : black;
     font-weight : bold;
-}
+} */
+
 
 .nav-bottom{
     color : black;
@@ -84,6 +90,7 @@
 }
 
 .topmenu-bottom ul li{
+    font-weight : bold;
     margin-right : 8px;
     line-height : 40px;
 }
@@ -106,7 +113,8 @@
         </div>
         <div class="nav-mid float-fix">
             <div class="topmenu-mid layout">
-                <img src="img/logo.png" style="height:95%; margin : 3px">
+                <a href="index.php"><img src="img/logo.png" class="" style="height:95%; margin-top : 3px; margin-left : 35px;"></a>
+                <a href="mypage.php"><img src="img/mypage.png" class="mypage" style="height:70%; float : right; margin-top:11px; margin-right : 0x"></a>
             </div>
         </div>
         <div class="nav-bottom float-fix">
@@ -118,5 +126,5 @@
             </div>
         </div>
     </nav>
-</body>
-</html>
+<!-- </body>
+</html> -->
