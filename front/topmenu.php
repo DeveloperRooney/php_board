@@ -53,7 +53,7 @@
     border-bottom : 1.2px solid #EAEAEA;
     /* background-color : #fff; */
     /* box-shadow : 0px 0.8px 5px 0px #CFCFCF; */
-    box-shadow: 0 4px 4px -4px #CFCFCF;
+    /* box-shadow: 0 4px 4px -4px #CFCFCF; */
 }
 
 .topmenu-mid {
@@ -67,11 +67,29 @@
 }
 
 .topmenu-mid ul li {
+    margin-right : 10px;
     font-size : 18px;
+    color : black;
     font-weight : bold;
 }
 
-.topmenu-mid ul li:nth-child(1) {
+.nav-bottom{
+    color : black;
+    box-shadow: 0 4px 4px -3px #CFCFCF;
+
+}
+
+.topmenu-bottom ul{
+    height : 40px;
+}
+
+.topmenu-bottom ul li{
+    margin-right : 8px;
+    line-height : 40px;
+}
+
+.topmenu-bottom .odd {
+    margin-right : 15px;
 }
 
 </style>
@@ -88,13 +106,16 @@
         </div>
         <div class="nav-mid float-fix">
             <div class="topmenu-mid layout">
-                <img src="img/logo.png" style="height:95%; margin-top : 3px">
+                <img src="img/logo.png" style="height:95%; margin : 3px">
+            </div>
+        </div>
+        <div class="nav-bottom float-fix">
+            <div class="topmenu-bottom layout">
                 <ul>
                     <li><a href="">공지사항</a></li>
-                    <li><a href="">커뮤니티</a></li>
+                    <li class="odd"><a href="">커뮤니티</a></li>
                 </ul>
             </div>
-            
         </div>
     </nav>
 </body>

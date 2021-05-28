@@ -9,6 +9,19 @@
     clear : both;
 }
 
+@media screen and (max-width : 980px) {
+
+    .navbar ul {
+        margin : 0;
+    }
+
+    .layout {
+        width : 98%;
+        margin-left: 2.5%;
+    }
+}
+
+
 @media screen and (max-width : 768px) {
     .layout {
         width : 98%;
