@@ -25,7 +25,7 @@ while (true) {
 <style>
 
     .section-main {
-        background-color : orange;
+        background-color : lightblue;
         /* border : 1px solid black; */
         width : 90%;
         margin : 0 auto;
@@ -37,11 +37,13 @@ while (true) {
         margin : 20px auto;
         margin-bottom : 10px !important;
         background-color : #f2f3f7;
+        /* background-color : black; */
         text-align : center;
         box-shadow: 0 4px 4px -3px #CFCFCF;
     }
 
     .article-top span {
+        color : black;
         display : inline-block;
         height: 35px;
         line-height : 35px;

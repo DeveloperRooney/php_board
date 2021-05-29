@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/util.css">
 
-    <title>루 :: 로그인</title>
+    <title>루 :: 아이디 찾기</title>
 </head>
 
 <style>
@@ -58,8 +58,9 @@
         margin-bottom : 10px;
     }
 
-    .login-input input:focus{
-    }
+    /* .login-input input:focus{
+        outline:none;
+    } */
 
     .login-input input::placeholder {
         color : #c5c4c4;
@@ -85,23 +86,23 @@
         <a href="../index.php">
             <img src="../img/home.png" style="width : 7%; float : left; margin-left : 20px;">
         </a>
-        <span style="margin-right : 40px">로그인</span>
+        <span style="margin-right : 40px">아이디 찾기</span>
     </div>
     <div class="layout">
         <div class="login-title">
-            <h1 style="text-align:center;">Welcome!</h1>
-            <p>루에 오신 것을 환영합니다.</p>
+            <h1 style="text-align:center;">이런!</h1>
+            <p>아이디를 잊으셨나요?</p>
         </div>
     </div>
     <div class="login-input">
         <form action="doLogin.php" method=>
-            <input type="text" placeholder="아이디">
-            <input type="password" placeholder="비밀번호">
-            <a href="javascript:login()">로그인</a>
+            <input type="text" placeholder="이름">
+            <input type="text" placeholder="이메일">
+            <a href="javascript:login()">아이디 찾기</a>
         </form>
     </div>
     <div class="search">
-        <a href="idSearch.php">아이디 찾기</a> | <a href="passSearch.php">비밀번호 찾기</a> | <a href="join.php">회원가입</a>
+        <a href="login.php">로그인</a> | <a href="passSearch.php">비밀번호 찾기</a> | <a href="join.php">회원가입</a>
     </div>
 </body>
 

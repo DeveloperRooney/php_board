@@ -42,7 +42,8 @@
 }
 
 .nav-top {
-    background-color : #f2f3f7;
+    /* background-color : #f2f3f7; */
+    background-color : none;
 }
 
 .topmenu-top, .topmenu-mid {
@@ -51,7 +52,8 @@
 }
 
 .nav-mid {
-    border-bottom : 1.2px solid #EAEAEA;
+    border-top : 1.2px solid #EAEAEA;
+    /* border-bottom : 1.2px solid #EAEAEA; */
     /* background-color : #fff; */
     /* box-shadow : 0px 0.8px 5px 0px #CFCFCF; */
     /* box-shadow: 0 4px 4px -4px #CFCFCF; */
@@ -80,6 +82,7 @@
 
 
 .nav-bottom{
+    border-top : 1.4px solid #EAEAEA;
     color : black;
     box-shadow: 0 4px 4px -3px #CFCFCF;
 
@@ -106,7 +109,7 @@
         <div class="nav-top float-fix">
             <div class="topmenu-top layout">
                 <ul>
-                    <li><a href="">회원가입</a></li>
+                    <li><a href="user/join.php">회원가입</a></li>
                     <li><a href="user/login.php">로그인</a></li>
                 </ul>
             </div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/util.css">
 
-    <title>루 :: 로그인</title>
+    <title>루 :: 회원가입</title>
 </head>
 
 <style>
@@ -58,8 +58,9 @@
         margin-bottom : 10px;
     }
 
-    .login-input input:focus{
-    }
+    /* .login-input input:focus{
+        outline:none;
+    } */
 
     .login-input input::placeholder {
         color : #c5c4c4;
@@ -85,7 +86,7 @@
         <a href="../index.php">
             <img src="../img/home.png" style="width : 7%; float : left; margin-left : 20px;">
         </a>
-        <span style="margin-right : 40px">로그인</span>
+        <span style="margin-right : 40px">회원가입</span>
     </div>
     <div class="layout">
         <div class="login-title">
@@ -97,7 +98,7 @@
         <form action="doLogin.php" method=>
             <input type="text" placeholder="아이디">
             <input type="password" placeholder="비밀번호">
-            <a href="javascript:login()">로그인</a>
+            <a href="javascript:login()">회원가입</a>
         </form>
     </div>
     <div class="search">
