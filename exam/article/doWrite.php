@@ -1,6 +1,6 @@
 <?php
 
-$dbConn = mysqli_connect("localhost", "wayne94", "suhan1994@@", "wayne94") or die("MariaDB 연결 실패");
+require_once("../util/dao.php");
 
 $title = $_POST['title'];
 $name = $_POST['name'];
