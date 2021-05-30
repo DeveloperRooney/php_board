@@ -7,7 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/util.css">
+    <!-- <link rel="stylesheet" href="css/util.css"> -->
 
     <!-- google font -->
     
@@ -117,7 +117,7 @@
         <div class="nav-mid float-fix">
             <div class="topmenu-mid layout">
                 <a href="index.php"><img src="img/logo.png" class="" style="height:95%; margin-top : 3px; margin-left : 35px;"></a>
-                <a href="mypage.php"><img src="img/mypage.png" class="mypage" style="height:70%; float : right; margin-top:11px; margin-right : 0x"></a>
+                <a href="mypage.php"><img src="img/mypage.png" class="mypage" style="height:70%; float : right; margin-top:11px; margin-right : 55px"></a>
             </div>
         </div>
         <div class="nav-bottom float-fix">
