@@ -23,7 +23,7 @@ while (true) {
 ?>
 
 <style>
-
+    
     .section-main {
         background-color : lightblue;
         /* border : 1px solid black; */
