@@ -46,6 +46,7 @@
 
     .login-input {
         padding : 0 30px;
+        font-weight : bold;
     }
     
     .login-input input{
@@ -59,6 +60,7 @@
     }
 
     .login-input input:focus{
+        /* outline:none; */
     }
 
     .login-input input::placeholder {

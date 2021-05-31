@@ -46,6 +46,8 @@
 
     .login-input {
         padding : 0 30px;
+        font-weight : bold;
+
     }
     
     .login-input input{
