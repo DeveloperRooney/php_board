@@ -1,11 +1,13 @@
 <?php
 
+$dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("MariaDB 연결 실패");
 
 /* 데이터 베이스 관련 함수 시작 */
 
-function DB__getRow($sql){
-    $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("MariaDB 연결 실패");
 
+
+function DB__getRow($sql){
+    global $dbConn;
     $rs = mysqli_query($dbConn, $sql);
 
     $row = mysqli_fetch_assoc($rs);
@@ -15,8 +17,7 @@ function DB__getRow($sql){
 }
 
 function DB__getRows($sql){
-    $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("MariaDB 연결 실패");
-
+    global $dbConn;
     $rs = mysqli_query($dbConn, $sql);
 
     $rows = [];
