@@ -2,25 +2,13 @@
 
 include_once("topmenu.php");
 
-// $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("mariaDB 연결 실패");
-
-require_once("util/dao.php");
+require_once("util/util.php");
 
 $sql = "select * from article order by id desc limit 8";
 
-$rs = mysqli_query($dbConn, $sql);
 
-$list_array = [];
+$list_array = DB__getRows($sql);
 
-while (true) {
-    $article = mysqli_fetch_assoc($rs);
-
-    if ($article == null) {
-        break;
-    }
-
-    $list_array[] = $article;
-}
 
 ?>
 
