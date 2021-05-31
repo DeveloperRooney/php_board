@@ -2,15 +2,16 @@
 
 // $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("mariaDB 연결 실패");
 
-require_once("../util/dao.php");
+
+require_once "../util/dao.php";
 
 // echo $_GET['userid'];
 
 if($_GET['userid'] != NULL){
 
 
-	if (strlen($_GET['userid']) < 7) {
-		echo "아이디는 7자 이상 사용 가능합니다.";
+	if (strlen($_GET['userid']) < 6) {
+		echo "아이디는 6자 이상 사용 가능합니다.";
 	}else {
 
 		$regExpId = "/^[a-z0-9_-]\w{5,20}$/";
