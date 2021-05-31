@@ -2,7 +2,9 @@
 
 include_once("topmenu.php");
 
-$dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("mariaDB 연결 실패");
+// $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94") or die("mariaDB 연결 실패");
+
+require_once("util/dao.php");
 
 $sql = "select * from article order by id desc limit 8";
 

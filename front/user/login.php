@@ -85,9 +85,9 @@
 <body>
     <div class="login-top">
         <a href="../index.php">
-            <img src="../img/home.png" style="width : 7%; float : left; margin-left : 20px;">
+            <img src="../img/home.png" style="width : 32px; float : left; margin-left : 20px;">
         </a>
-        <span style="margin-right : 40px">로그인</span>
+        <span style="margin-right : 50px">로그인</span>
     </div>
     <div class="layout">
         <div class="login-title">
@@ -96,9 +96,9 @@
         </div>
     </div>
     <div class="login-input">
-        <form action="doLogin.php" method=>
-            <input type="text" placeholder="아이디">
-            <input type="password" placeholder="비밀번호">
+        <form action="doLogin.php" method="POST" name="frm">
+            <input type="text" name="userid" placeholder="아이디">
+            <input type="password" name="userpass" placeholder="비밀번호">
             <a href="javascript:login()">로그인</a>
         </form>
     </div>
@@ -109,7 +109,18 @@
 
 <script>
     function login() {
-        alert("로그인 버튼 테스트");
+        if (frm.userid.value =="") {
+            alert("아이디를 입력해 주세요.");
+            frm.userid.focus();
+            return;
+        }else if (frm.userpass.value =="") {
+            alert("비밀번호를 입력해 주세요.");
+            frm.userpass.focus();
+            return;
+        }
+
+        frm.submit();
+
     }
 </script>    
 </html>

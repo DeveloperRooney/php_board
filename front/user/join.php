@@ -56,7 +56,7 @@
     .login-input button{
         border : none;
         background-color : black;
-        padding : 15px 20px;
+        padding : 15px 5%;
         font-weight : bold;
         font-size : 14px;
         color : white;
@@ -109,23 +109,24 @@
 <body>
     <div class="login-top">
         <a href="../index.php">
-            <img src="../img/home.png" style="width : 7%; float : left; margin-left : 20px;">
+            <img src="../img/home.png" style="width : 32px; float : left; margin-left : 20px;">
         </a>
-        <span style="margin-right : 40px">회원가입</span>
+        <span style="margin-right : 60px">회원가입</span>
     </div>
     <div class="login-input">
-        <form name="frm" action="doLogin.php" method="POST" action="doJogin.php">
+        <form name="frm" action="doJoin.php" method="POST">
             <input type="text" name="userid" id="userid" placeholder="아이디" style="width: 70%;"><button id="idckbt" type="button" onClick="location.href='#'">중복확인</button>
             <div id="id_check" style="font-size : 14px">　</div>
             <input type="password" name="userpass" id="userpass" placeholder="비밀번호" style="margin-top:10px;">
-            <div id="pass_check" style="font-size : 14px"></div>
+            <div id="pass_check" style="font-size : 14px">　</div>
             <input type="password" name="userpassck" placeholder="비밀번호 확인">
             <input type="text" name="username" placeholder="이름(실명)">
-            <input type="text" name="useremail" placeholder="이메일" style="width: 70%;"><button type="button" onClick="location.href='#'" style="padding : 15px 34px;">인증</button>
+            <input type="text" name="nickname" placeholder="닉네임">
+            <input type="text" name="useremail" placeholder="이메일" style="width: 70%;"><button type="button" onClick="location.href='#'" style="padding : 15px 9.5%;">인증</button>
 
             <input type="text" name="birth" placeholder="생년월일(8자리)" style="width : 40%;">
-            <input type="radio" name="gender" value="남" style="vertical-align : middle; width : 20px; line-heigth : 40px; margin-left : 20px;"><span style="vertical-align : middle;">남자</span>
-            <input type="radio" name="gender" value="남" style="vertical-align : middle; width : 20px; line-heigth : 40px; margin-left : 30px;"><span style="vertical-align : middle;">여자</span>
+            <input type="radio" name="gender" value="남" style="vertical-align : middle; width : 20px; line-heigth : 40px; margin-left : 28px;"><span style="vertical-align : middle;">남자</span>
+            <input type="radio" name="gender" value="여" style="vertical-align : middle; width : 20px; line-heigth : 40px; margin-left : 20px;"><span style="vertical-align : middle;">여자</span>
             <a href="javascript:login()">회원가입</a>
         </form>
     </div>
@@ -162,6 +163,8 @@
             frm.birth.focus();
             return;
         }
+
+        frm.submit();
     }
 </script>
 

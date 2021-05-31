@@ -86,7 +86,7 @@
 <body>  
     <div class="login-top">
         <a href="../index.php">
-            <img src="../img/home.png" style="width : 7%; float : left; margin-left : 20px;">
+            <img src="../img/home.png" style="width : 32px; float : left; margin-left : 20px;">
         </a>
         <span style="margin-right : 40px">비밀번호 찾기</span>
     </div>
