@@ -1,10 +1,10 @@
 <?php
 
 
-session_start();
 
 require_once("../util/dao.php");
 
+session_start();
 
 $userId = $_POST['userId'];
 $userPass = $_POST['userPass'];
@@ -32,6 +32,7 @@ if ($idCkResult) {
         $_SESSION['userId'] = $result['userId'];
         $_SESSION['nickName'] = $result['nickName'];
         $_SESSION['userEmail'] = $result['userEmail'];
+
     }else {
         $loginCk = 3;
     }

@@ -2,7 +2,8 @@
 
 include_once("topmenu.php");
 
-require_once("util/util.php");
+require_once "util/util.php";
+
 
 $sql = "select * from article order by id desc limit 8";
 
