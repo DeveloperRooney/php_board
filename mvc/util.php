@@ -55,8 +55,6 @@ function DB__getRow2(DB__SeqSql $sql) {
 }
 
 
-
-
 function DB__getRow($sql) {
 
     $dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994", "wayne94");
