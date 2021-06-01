@@ -12,7 +12,7 @@ session_destroy();
 
 <script>
 
-    location.href="../article/list.php";
     alert("로그아웃되었습니다.");
+    location.replace("../index.php");
 
 </script>

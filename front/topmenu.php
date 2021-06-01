@@ -118,10 +118,22 @@ session_start();
     <nav class="navbar">
         <div class="nav-top float-fix">
             <div class="topmenu-top layout">
+                
+                <?php if (isset($_SESSION['userId'])) {?>
+                
+                <ul>
+                    <li><a href="user/userModify.php">정보수정</a></li>
+                    <li><a href="user/doLogout.php">로그아웃</a></li>
+                </ul>
+                
+                <?php }else {?>
+                
                 <ul>
                     <li><a href="user/join.php">회원가입</a></li>
                     <li><a href="user/login.php">로그인</a></li>
                 </ul>
+                <?php }?>
+
             </div>
         </div>
         <div class="nav-mid float-fix">

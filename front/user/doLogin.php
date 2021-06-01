@@ -4,6 +4,8 @@
 
 require_once("../util/dao.php");
 
+session_start();
+
 $userId = $_POST['userid'];
 $userPass = $_POST['userpass'];
 
@@ -24,12 +26,14 @@ if ($idCkResult) {
     $rs = mysqli_query($dbConn, $passCk);
     $result = mysqli_fetch_assoc($rs);
     if ($result['userPass'] == $userPass) {
-        $loginCk = 1;
-
+        
         // 세션
         $_SESSION['userId'] = $result['userId'];
+        $_SESSION['userName'] = $result['userName'];
         $_SESSION['nickName'] = $result['nickName'];
         $_SESSION['userEmail'] = $result['userEmail'];
+
+        $loginCk = 1;
     }else {
         $loginCk = 3;
     }
@@ -37,15 +41,20 @@ if ($idCkResult) {
     $loginCk = 0;
 }
 
+if ($loginCk == 1) {
+    echo '<script>';
+    echo 'alert("로그인되었습니다.");';
+    echo 'location.replace("../index.php");';
+    echo '</script>';
+    exit;
+}else{
+    echo '<script>';
+    echo 'alert("아이디 또는 비밀번호가 일치하지 않습니다.");';
+    echo 'history.back();';
+    echo '</script>';
+
+    exit;
+}
+
 ?>
 
-<script>
-
-    <?php if ($loginCk == 1) {?>
-        alert("로그인되었습니다.");
-        location.href="../index.php";
-    <?php }else {?>
-        alert("아이디 또는 비밀번호가 일치하지 않습니다.");
-        history.back();
-    <?php }?>
-</script>

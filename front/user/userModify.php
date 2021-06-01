@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -111,42 +113,37 @@
         <a href="../index.php">
             <img src="../img/home.png" style="width : 32px; float : left; margin-left : 20px;">
         </a>
-        <span style="margin-right : 60px">회원가입</span>
+        <span style="margin-right : 60px">정보수정</span>
     </div>
     <div class="login-input">
         <form name="frm" action="doJoin.php" method="POST">
-            <input type="text" name="userid" id="userid" placeholder="아이디" style="width: 70%;"><button id="idckbt" type="button" onClick="location.href='#'">중복확인</button>
-            <div id="id_check" style="font-size : 14px">　</div>
-            <input type="password" name="userpass" id="userpass" placeholder="비밀번호" style="margin-top:10px;">
-            <div id="pass_check" style="font-size : 14px">　</div>
-            <input type="password" name="userpassck" placeholder="비밀번호 확인">
-            <input type="text" name="username" placeholder="이름(실명)">
+            <div style="font-size:18px; margin-left : 0px; margin-bottom : 30px;">아이디 : <?=$_SESSION['userId']?></div>
+            <div style="font-size:18px; margin-left : 0px; margin-bottom : 10px; margin-top : 20px;">이름 : <?=$_SESSION['userName']?></div>
+            <input type="password" name="userpass" id="userpass" placeholder="현재 비밀번호" style="margin-top:10px;">
+            <input type="password" name="newpass" placeholder="새로운 비밀번호">
+            <input type="password" name="newpassck" placeholder="새로운 비밀번호 확인">
             <input type="text" name="nickname" placeholder="닉네임">
             <input type="text" name="useremail" placeholder="이메일" style="width: 70%;"><button type="button" onClick="location.href='#'" style="padding : 15px 9.5%;">인증</button>
 
             <input type="text" name="birth" placeholder="생년월일(8자리)" style="width : 40%;">
             <input type="radio" name="gender" value="남" style="vertical-align : middle; width : 20px; line-heigth : 40px; margin-left : 14%;"><span style="vertical-align : middle;">남자</span>
             <input type="radio" name="gender" value="여" style="vertical-align : middle; width : 20px; line-heigth : 40px; margin-left : 4%;"><span style="vertical-align : middle;">여자</span>
-            <a href="javascript:login()">회원가입</a>
+            <a href="javascript:login()">정보수정</a>
         </form>
     </div>
 </body>
 
 <script>
     function login() {
-        if (frm.userid.value == "") {
-            alert("아이디를 입력해 주세요.");
-            frm.userid.focus();
-            return;
-        }else if (frm.userpass.value == "") {
-            alert("비밀번호를 입력해 주세요.");
+        if (frm.userpass.value == "") {
+            alert("현재 비밀번호를 입력해 주세요.");
             frm.userpass.focus();
             return;
-        }else if (frm.userpassck.value == "") {
-            alert("비밀번호 확인을 입력해 주세요.");
+        }else if (frm.newpass.value == "") {
+            alert("새로운 비밀번호를 입력해 주세요.");
             frm.userpassck.focus();
             return;
-        }else if (frm.userpass.value != frm.userpassck.value) {
+        }else if (frm.newpassck.value != frm.userpassck.value) {
             alert("비밀번호 확인이 일치하지 않습니다.");
             frm.userpassck.focus();
             return;
