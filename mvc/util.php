@@ -1,9 +1,21 @@
 <?php
 
-class DB__SeqSql {
-    private string $templateStr;
 
-    private array $params;
+// MVC 패턴 구조화 연습 43강까지 진행
+
+$dbConn = mysqli_connect("wayne94.cafe24.com", "wayne94", "suhan1994@@", "wayne94");
+
+
+class DB__SeqSql {
+    private string $templateStr = "";
+
+    private array $params = [];
+
+
+    public function __toString() : string {
+     
+        return $this->getTemplate();
+    }
 
     public function add(string $sqlBit, string $param = null) {
         $this->templateStr .= " " .$sqlBit;
