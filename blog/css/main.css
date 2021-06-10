@@ -1,0 +1,286 @@
+/* 로보토 Condensed 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+/* 롯데마트드림 폰트 */
+@font-face {
+  font-family: "LotteMartDream";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "LotteMartDream";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "LotteMartDream";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2")
+      format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff")
+      format("woff");
+}
+
+html {
+  font-family: "Roboto Condensed", "LotteMartDream", sans-serif;
+}
+
+/* util 시작 */
+
+/* 중앙 정렬 레이아웃 */
+
+.layout {
+    margin: 0 auto;
+    width: 63%;
+}
+
+
+@media screen and (max-width : 1050px) {
+    .layout {
+        margin: 0 1%;
+        width: auto;
+    }   
+}
+
+@media screen and (max-width : 665px) {
+    
+    .logo-area {
+        margin-top: 16px;
+    }
+
+    header {
+        height: 56px;
+    }
+    
+    .menu-area {
+        display: none;
+    }
+
+    .hamburger {
+        display: block !important;
+    }
+
+}
+
+/* header */
+
+header {
+    background-color: #125d98;
+    color: white;
+}
+
+.topmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topmenu ul > li, a {
+    display: inline-block;
+}
+
+.topmenu ul > li:hover {
+    background-color: white;
+    color: #125d98;
+}
+
+.menu-area a{
+    padding : 20px 12px;
+
+    font-weight: bold;
+}
+
+.logo-area span {
+    margin-left: 2%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.menu-area > ul > li > ul > li {
+    display: block;
+}
+
+.menu-area > ul > li {
+    position: relative;
+}
+
+.menu-area > ul > li:hover > ul {
+    display: block;
+    color : white;
+}
+
+.menu-area > ul > li > ul {
+    display: none;
+    text-align: center;
+    position: absolute;
+    background-color: #125d98;
+    top: 100%;
+    width: 100%;
+}
+
+.hamburger {
+    font-size: 25px;
+    position: absolute;
+    top : 16px;
+    right : 20px;
+    display: none;
+}
+
+.dropdown {
+    padding : 37px 0;
+    display: none;
+    background-color: #125e98c2;
+    position: absolute;
+    top : 56px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+}
+
+
+.dropdown li {
+    font-size: 20px;
+    display: block;
+    padding: 12px 0;
+    font-weight: bold;
+}
+
+/* index */
+
+.index {
+    padding : 35px;
+    display: grid;
+    grid-gap : 30px;
+    grid-template-areas: 'banner banner'
+                         'dev board';
+    grid-template-columns: 50% 50%;
+}
+
+/* @media screen and (max-width:665px) {
+    .index {
+        display: grid;
+        grid-gap : 20px;
+        grid-template-areas: 'banner'
+                             'dev'
+                             'board';
+    }
+    .banner {
+        height: 200px;
+    }
+} */
+
+.index > div {
+    border-radius: 8px;
+    padding:20px;
+    /* border: 1px solid #999; */
+}
+
+.banner {
+    border-radius: 10px;
+    grid-area: banner;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.301);
+    height: 230px;
+    /* height: 200px; */
+
+}
+
+.dev {
+    grid-area: dev;
+    /* width: 50%; */
+}
+
+.index h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 12px;
+    color: #125d98;
+}
+
+.article {
+    padding : 15px 0;
+    transition: margin 0.5s;
+}
+
+.article:hover {
+    margin-left : 10px;
+}
+
+.index .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+
+
+.board {
+    grid-area: board;
+
+}
+
+
+/* @media screen and (max-width:1100px) {
+    .banner {
+        height: 200px;
+    }
+} */
+
+
+@media screen and (max-width:665px) {
+    .index {
+        padding : 30px 10px;
+        display: grid;
+        grid-gap : 20px;
+        grid-template-areas: 'banner'
+                             'dev'
+                             'board';
+
+        grid-template-columns: none;
+        
+    }
+    .banner {
+        height: 200px;
+    }
+}
+
+
+/* footer */
+
+footer {
+    background-color: #0a1d37;
+    color: white;
+    margin-top: 35px;
+}
+
+.footer {
+    padding : 35px 0;
+    text-align: center;
+}
+
+.footer a{
+    display: inline-block;
+    font-size: 30px;
+}
+
+.footer ul > li {
+    padding : 8px;
+}
+
+.footer ul>li:last-child {
+    color : #999;
+}
